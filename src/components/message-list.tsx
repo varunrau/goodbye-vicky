@@ -13,16 +13,13 @@ export function MessageList() {
               <span className="font-semibold">Penny</span>
               <span className="text-sm text-muted-foreground">12:34 PM</span>
             </div>
-            <p>Message from Penny</p>
+            <p>vicky i am stuck at notion without you and i would like some help!! i remember when people ask me how things are going when i first joined notion and i'd tell them, &quot;the company is more serious than i expected but my onboarding buddy is great!!&quot; and you were the one who made WIT a reality after you me and alicia would muse about how there's no community for eng women every time we hang out ♥️ notion will be so different without you. i will be very lonely. but i'm excited for your next chapter!! have lots of fun everywhere you go like you always do and maybe we'll get to work together again in a next life/company, that'd be the dream!!</p>
             <div className="relative w-full max-w-[400px] pt-[56.25%]">
-              <video 
-                controls 
+              <img
+                src="/penny.png"
+                alt="Penny's image"
                 className="absolute inset-0 h-full w-full rounded-lg border bg-card object-cover"
-                poster="/placeholder.svg?height=225&width=400"
-              >
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
             </div>
           </div>
         </div>
