@@ -11,6 +11,18 @@ interface Message {
 
 export const messages: Message[] = [
     {
+      id: 7,
+      sender: "Karunya",
+      senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U02H6KXP9UJ-e831fbed4fc9-512",
+      content: (
+        <p>
+          Vicky I&apos;m stuck on a really hard problem and I need your help! over my time at notion, I feel like I&apos;ve had a great time following in your footsteps — joining growth (best decision ever!), moving to NYC (also pretty fun!!), and being one of the few nyctinos to continue living in Manhattan (fun but expensive). I think this speaks to how cool you are and what a baller you are; I just want to be like you! I&apos;ll miss seeing you around the NYC office — it really won&apos;t be the same place without your laugh, your fun stories, and your kind heart &lt;3 while it&apos;ll be tough for us, I can only say that this new chapter sounds like the best time ever and I will follow along eagerly on insta. It goes without saying, but there&apos;s always a guest forkable link and unlimited snax at notion nyc waiting for you! Like penny, I hope we work together again one day (either in this life or some parallel universe, I&apos;ll take it~)
+        </p>
+      ),
+      timestamp: "12:40 PM",
+      images: ["/karunya.jpg"]
+    },
+    {
       id: 2,
       sender: "Eddie",
       senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U027CC45LC9-6d9c7c41e311-512",
@@ -94,5 +106,5 @@ export const messages: Message[] = [
       ),
       timestamp: "12:39 PM",
       images: [],
-    }
+    },
   ];
