@@ -10,17 +10,43 @@ interface Message {
 }
 
 export const messages: Message[] = [
+  {
+    id: 0,
+    sender: "Notion AI",
+    senderImage: "https://avatars.slack-edge.com/2024-10-17/7895894568386_a35b75208587b0ebcac7_512.png",
+    content: (
+      <p>
+        Dear Vicky, as you embark on your next adventure, we&apos;ll miss your musical talents on the piano and ukulele, and your enthusiasm for tennis and hiking! From your journey starting as a Bay Area native to becoming part of our Engineering team, you&apos;ve brought such wonderful energy to the team.
+        <br /><br />
+        We&apos;ll fondly remember your love for cats, your amazing post-grad adventures in Southeast Asia, and your dedication to learning new things - from drums to pescatarian cooking! Your goal of being able to play music completely by ear perfectly captures your determination and creativity.
+        <br /><br />
+        Wishing you all the best in your next chapter! Don&apos;t forget to keep working on those drumming skills! 🎵 🎸 🥁
+      </p>
+    ),
+    timestamp: "12:33 PM",
+    images: []
+  },
     {
-      id: 7,
-      sender: "Karunya",
-      senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U02H6KXP9UJ-e831fbed4fc9-512",
+      id: 1,
+      sender: "Penny",
+      senderImage:
+        "https://ca.slack-edge.com/E063KNMBD8W-U0285RZMMU6-6d41a6203044-512",
       content: (
         <p>
-          Vicky I&apos;m stuck on a really hard problem and I need your help! over my time at notion, I feel like I&apos;ve had a great time following in your footsteps — joining growth (best decision ever!), moving to NYC (also pretty fun!!), and being one of the few nyctinos to continue living in Manhattan (fun but expensive). I think this speaks to how cool you are and what a baller you are; I just want to be like you! I&apos;ll miss seeing you around the NYC office — it really won&apos;t be the same place without your laugh, your fun stories, and your kind heart &lt;3 while it&apos;ll be tough for us, I can only say that this new chapter sounds like the best time ever and I will follow along eagerly on insta. It goes without saying, but there&apos;s always a guest forkable link and unlimited snax at notion nyc waiting for you! Like penny, I hope we work together again one day (either in this life or some parallel universe, I&apos;ll take it~)
+          vicky i am stuck at notion without you and i would like some help!! i
+          remember when people asked me how things are going when i first joined
+          notion and i&apos;d tell them, &ldquo;the company is more serious than
+          i expected but my onboarding buddy is great!!&rdquo; and you were the
+          one who made WIT a reality after you me and alicia would muse about
+          how there&apos;s no community for eng women every time we hung out ♥️ 
+          notion will be so different without you. i will be very lonely. but
+          i&apos;m excited for your next chapter!! have lots of fun everywhere
+          you go like you always do and maybe we&apos;ll get to work together
+          again in a next life/company, that&apos;d be the dream!!
         </p>
       ),
-      timestamp: "12:40 PM",
-      images: ["/karunya.jpg"]
+      timestamp: "12:34 PM",
+      images: ["/penny.png"],
     },
     {
       id: 2,
@@ -61,28 +87,6 @@ export const messages: Message[] = [
       images: [],
     },
     {
-      id: 1,
-      sender: "Penny",
-      senderImage:
-        "https://ca.slack-edge.com/E063KNMBD8W-U0285RZMMU6-6d41a6203044-512",
-      content: (
-        <p>
-          vicky i am stuck at notion without you and i would like some help!! i
-          remember when people asked me how things are going when i first joined
-          notion and i&apos;d tell them, &ldquo;the company is more serious than
-          i expected but my onboarding buddy is great!!&rdquo; and you were the
-          one who made WIT a reality after you me and alicia would muse about
-          how there&apos;s no community for eng women every time we hung out ♥️ 
-          notion will be so different without you. i will be very lonely. but
-          i&apos;m excited for your next chapter!! have lots of fun everywhere
-          you go like you always do and maybe we&apos;ll get to work together
-          again in a next life/company, that&apos;d be the dream!!
-        </p>
-      ),
-      timestamp: "12:34 PM",
-      images: ["/penny.png"],
-    },
-    {
       id: 5,
       sender: "Victor",
       senderImage:
@@ -96,6 +100,30 @@ export const messages: Message[] = [
       images: ["/victor1.png", "/victor2.jpg"],
     },
     {
+      id: 7,
+      sender: "Karunya",
+      senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U02H6KXP9UJ-e831fbed4fc9-512",
+      content: (
+        <p>
+          Vicky I&apos;m stuck on a really hard problem and I need your help! over my time at notion, I feel like I&apos;ve had a great time following in your footsteps — joining growth (best decision ever!), moving to NYC (also pretty fun!!), and being one of the few nyctinos to continue living in Manhattan (fun but expensive). I think this speaks to how cool you are and what a baller you are; I just want to be like you! I&apos;ll miss seeing you around the NYC office — it really won&apos;t be the same place without your laugh, your fun stories, and your kind heart &lt;3 while it&apos;ll be tough for us, I can only say that this new chapter sounds like the best time ever and I will follow along eagerly on insta. It goes without saying, but there&apos;s always a guest forkable link and unlimited snax at notion nyc waiting for you! Like penny, I hope we work together again one day (either in this life or some parallel universe, I&apos;ll take it~)
+        </p>
+      ),
+      timestamp: "12:40 PM",
+      images: ["/karunya.jpg"]
+    },
+    {
+      id: 9,
+      sender: "Ekin",
+      senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U022NUQT0HE-c566165c32f1-512",
+      content: (
+        <p>
+          I didn&apos;t attend many socials at Notion, but I still made it to yours for 2 mins and I hope that shows how much I care 😄
+        </p>
+      ),
+      timestamp: "12:41 PM",
+      images: [],
+    },
+    {
       id: 6,
       sender: "vr",
       senderImage: "https://ca.slack-edge.com/E063KNMBD8W-U016W7KJ38F-fe686db9f302-512",
@@ -104,7 +132,7 @@ export const messages: Message[] = [
           I consider myself very lucky that we got to work together. I&apos;m grateful for all that you&apos;ve done for the teams we&apos;ve been on together to help them succeed together. Whether it&apos;s raising problems that the team is facing, nurturing our team&apos;s culture, or looking out for new teammates, you&apos;ve always created a welcoming environment for us all. We&apos;re all going to miss you!! I hope you enjoy some well-deserved time off. Know that we&apos;re all still going to be here for you whenever you need us, just as you have been for us!
         </p>
       ),
-      timestamp: "12:39 PM",
+      timestamp: "12:44 PM",
       images: [],
     },
   ];
