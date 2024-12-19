@@ -3,7 +3,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { Sidebar } from "@/components/sidebar"
 import { ChatArea } from "@/components/chat-area"
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useEffect } from "react";
 import { messages } from "@/lib/messages";
 
@@ -12,7 +12,7 @@ export default function Page() {
   const [canStart, setCanStart] = useState(false);
 
   const [numMessages, setNumMessages] = useState(0);
-  const sound = new Audio('ping.mp3')
+  const sound = useMemo(() => new Audio('ping.mp3'), []);
 
   useEffect(() => {
     if (!canStart) {
@@ -27,7 +27,7 @@ export default function Page() {
         return newValue;
       });
     }, Math.random() * 4000 + 1000);
-  }, [canStart, numMessages]);
+  }, [canStart, numMessages, sound]);
 
   return (
     <SidebarProvider>
