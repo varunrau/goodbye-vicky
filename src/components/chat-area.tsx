@@ -1,9 +1,11 @@
+"use client"
+
 import { MoreHorizontal } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import { MessageList } from "@/components/message-list"
 
-export function ChatArea() {
+export function ChatArea({ numMessages }: { numMessages: number }) {
   return (
     <div className="flex h-full w-full flex-col bg-white">
       {/* Header */}
@@ -17,7 +19,7 @@ export function ChatArea() {
       </header>
 
       {/* Messages */}
-      <MessageList />
+      <MessageList numMessages={numMessages} />
 
       {/* Join Channel Button */}
       <div className="border-t p-4 flex flex-col items-center gap-2">
@@ -34,4 +36,3 @@ export function ChatArea() {
     </div>
   )
 }
-

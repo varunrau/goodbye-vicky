@@ -18,7 +18,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-export function Sidebar() {
+export function Sidebar({ numMessages }: { numMessages: number }) {
   const { state } = useSidebar()
 
   return (
@@ -71,7 +71,7 @@ export function Sidebar() {
                   <Hash className="h-4 w-4" />
                   <span>#eng-growth-help-i-am-stuck-and-would-like-some-help </span>
                 </SidebarMenuButton>
-                <SidebarMenuBadge className="bg-red-500 text-white">4</SidebarMenuBadge>
+                {numMessages > 0 && <SidebarMenuBadge className="bg-red-500 text-white">{numMessages}</SidebarMenuBadge>}
               </SidebarMenuItem>
               {/* Shimmer loading states for remaining channels */}
               {Array.from({ length: 4 }).map((_, i) => (
