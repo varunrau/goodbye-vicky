@@ -9,19 +9,31 @@ import { messages } from "@/lib/messages";
 
 export default function Page() {
 
+  const [canStart, setCanStart] = useState(false);
+
   const [numMessages, setNumMessages] = useState(0);
+  const sound = new Audio('ping.mp3')
 
   useEffect(() => {
+    if (!canStart) {
+      return;
+    }
     setTimeout(() => {
-      setNumMessages(prev => Math.min(prev + 1, messages.length));
+      setNumMessages(prev => {
+        const newValue = Math.min(prev + 1, messages.length);
+        if (newValue !== prev) {
+          sound.play();
+        }
+        return newValue;
+      });
     }, Math.random() * 4000 + 1000);
-  }, [numMessages]);
+  }, [canStart, numMessages]);
 
   return (
     <SidebarProvider>
       <div className="flex h-screen w-full overflow-hidden bg-[#3F0E40]">
-        <Sidebar numMessages={numMessages} />
-        <ChatArea numMessages={numMessages} />
+        <Sidebar numMessages={numMessages} canStart={canStart} setCanStart={setCanStart} />
+        <ChatArea numMessages={numMessages} canStart={canStart} />
       </div>
     </SidebarProvider>
   )

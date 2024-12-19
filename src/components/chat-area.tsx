@@ -5,7 +5,20 @@ import { MoreHorizontal } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { MessageList } from "@/components/message-list"
 
-export function ChatArea({ numMessages }: { numMessages: number }) {
+export function ChatArea({ numMessages, canStart }: { numMessages: number, canStart: boolean }) {
+
+  if (!canStart) {
+    return (
+      <div className="flex h-full w-full flex-col bg-white">
+        <div className="flex h-full w-full flex-col bg-white items-center justify-center">
+          <div className="text-xl font-bold">
+            Select a channel to get started
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="flex h-full w-full flex-col bg-white">
       {/* Header */}

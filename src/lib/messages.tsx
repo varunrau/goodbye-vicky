@@ -1,7 +1,5 @@
 import { ReactNode } from "react"
 
-  
-
 interface Message {
   id: number
   sender: string
@@ -36,7 +34,7 @@ export const messages: Message[] = [
       senderImage:
         "https://ca.slack-edge.com/E063KNMBD8W-U0215HR7X40-bece43364e04-512",
       content:
-        "good luck on the next adventure! You&apos;ll be missed. RIP OG Growth team 💪🏼",
+        "good luck on the next adventure! You'll be missed. RIP OG Growth team 💪🏼",
       timestamp: "12:36 PM",
       images: [],
     },

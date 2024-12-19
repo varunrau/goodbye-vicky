@@ -18,11 +18,22 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-export function Sidebar({ numMessages }: { numMessages: number }) {
-  const { state } = useSidebar()
+export function Sidebar({
+  numMessages,
+  canStart,
+  setCanStart,
+}: {
+  numMessages: number;
+  canStart: boolean;
+  setCanStart: (canStart: boolean) => void;
+}) {
+  const { state } = useSidebar();
 
   return (
-    <SidebarPrimitive className="min-w-64 shrink-0 bg-[#3F0E40]" data-state={state}>
+    <SidebarPrimitive
+      className="min-w-64 shrink-0 bg-[#3F0E40]"
+      data-state={state}
+    >
       <SidebarHeader className="p-2">
         <SidebarMenu>
           <SidebarMenuItem>
@@ -67,11 +78,22 @@ export function Sidebar({ numMessages }: { numMessages: number }) {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton className="hover:bg-[#350D36] hover:text-white">
+                <SidebarMenuButton 
+                  className={`hover:bg-[#350D36] hover:text-white ${
+                    canStart ? 'bg-[#1164A3] text-white' : ''
+                  }`}
+                  onClick={() => setCanStart(true)}
+                >
                   <Hash className="h-4 w-4" />
-                  <span>#eng-growth-help-i-am-stuck-and-would-like-some-help </span>
+                  <span>
+                    #eng-growth-help-i-am-stuck-and-would-like-some-help{" "}
+                  </span>
                 </SidebarMenuButton>
-                {numMessages > 0 && <SidebarMenuBadge className="bg-red-500 text-white">{numMessages}</SidebarMenuBadge>}
+                {numMessages > 0 && (
+                  <SidebarMenuBadge className="bg-red-500 text-white">
+                    {numMessages}
+                  </SidebarMenuBadge>
+                )}
               </SidebarMenuItem>
               {/* Shimmer loading states for remaining channels */}
               {Array.from({ length: 4 }).map((_, i) => (
@@ -101,6 +123,6 @@ export function Sidebar({ numMessages }: { numMessages: number }) {
         </SidebarGroup>
       </SidebarContent>
     </SidebarPrimitive>
-  )
+  );
 }
 
