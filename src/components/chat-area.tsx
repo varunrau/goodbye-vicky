@@ -1,18 +1,19 @@
 "use client"
 
 import { MoreHorizontal } from 'lucide-react'
-
+import { useMobile } from '@/hooks/use-mobile'
 import { Button } from "@/components/ui/button"
 import { MessageList } from "@/components/message-list"
 
-export function ChatArea({ numMessages, canStart }: { numMessages: number, canStart: boolean }) {
+export function ChatArea({ numMessages, canStart, setCanStart }: { numMessages: number, canStart: boolean, setCanStart: (canStart: boolean) => void }) {
+  const isMobile = useMobile()
 
   if (!canStart) {
     return (
-      <div className="flex h-full w-full flex-col bg-white">
+      <div className="flex h-full w-full flex-col bg-white" onClick={() => setCanStart(true)}>
         <div className="flex h-full w-full flex-col bg-white items-center justify-center">
           <div className="text-xl font-bold">
-            Select a channel to get started
+            {isMobile ? "Tap anywhere to get started" : "Select a channel to get started"}
           </div>
         </div>
       </div>
@@ -21,8 +22,7 @@ export function ChatArea({ numMessages, canStart }: { numMessages: number, canSt
 
   return (
     <div className="flex h-full w-full flex-col bg-white">
-      {/* Header */}
-      <header className="flex h-12 items-center justify-between border-b border-[#522653] bg-[#3F0E40] px-4 text-white">
+      <header className="flex h-12 items-center justify-between border-b border-[#522653] bg-[#3F0E40] px-4 py-8 md:py-0 py-6 text-white">
         <div className="flex items-center gap-2">
           <h1 className="text-lg font-semibold">#eng-growth-help-i-am-stuck-and-would-like-some-help</h1>
           <Button variant="ghost" size="icon" className="text-white hover:bg-[#350D36]">

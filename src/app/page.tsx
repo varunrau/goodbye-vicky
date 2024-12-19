@@ -33,7 +33,7 @@ export default function Page() {
     <SidebarProvider>
       <div className="flex h-screen w-full overflow-hidden bg-[#3F0E40]">
         <Sidebar numMessages={numMessages} canStart={canStart} setCanStart={setCanStart} />
-        <ChatArea numMessages={numMessages} canStart={canStart} />
+        <ChatArea numMessages={numMessages} canStart={canStart} setCanStart={setCanStart} />
       </div>
     </SidebarProvider>
   )
