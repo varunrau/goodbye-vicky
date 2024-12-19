@@ -56,11 +56,11 @@ export const messages: Message[] = [
       content: (
         <p>
           vicky i am stuck at notion without you and i would like some help!! i
-          remember when people ask me how things are going when i first joined
+          remember when people asked me how things are going when i first joined
           notion and i&apos;d tell them, &ldquo;the company is more serious than
           i expected but my onboarding buddy is great!!&rdquo; and you were the
           one who made WIT a reality after you me and alicia would muse about
-          how there&apos;s no community for eng women every time we hang out ♥️
+          how there&apos;s no community for eng women every time we hung out :hearts:
           notion will be so different without you. i will be very lonely. but
           i&apos;m excited for your next chapter!! have lots of fun everywhere
           you go like you always do and maybe we&apos;ll get to work together
